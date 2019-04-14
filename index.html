@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Project</title>
+    <link rel="stylesheet" href="./stylesheets/style.css">
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="region-header">
+            <div class="block block--region">
+                <img src="./image/header-logo.png" alt="logo">
+            </div>
+            <nav rol="navigation" class="block block--menu--navigation-first">
+                <ul class="menu--nav">
+                    <a class="menu--nav-link" href="./">
+                        <li class="menu--nav-item">Home</li>
+                    </a>
+                    <a class="menu--nav-link" href="./">
+                        <li class="menu--nav-item">Discover</li>
+                    </a>
+                    <a class="menu--nav-link" href="./">
+                        <li class="menu--nav-item">About us</li>
+                    </a>
+                    <a class="menu--nav-link" href="./">
+                        <li class="menu--nav-item">Contact</li>
+                    </a>
+                    <a class="menu--nav-link" href="./">
+                        <li class="menu--nav-item">Help</li>
+                    </a>
+                </ul>
+            </nav>
+            <div class=" block block--serch">
+                <img class="search-open" src="./image/icon-search.png" onclick="searchFiled('.nav--search')">
+                <form class="nav--search">
+                    <input class="text-search" type="text" name="search" placeholder="Search text">
+                    <img class="icon-search" src="./image/icon-search.png">
+                    <img class="icon-close" src="./image/x-icon.png" onclick="closeFiled('.nav--search')">
+                </form>
+            </div>
+            <nav rol="navigation" class="block block--menu--navigation-second">
+                <div class="menu--nav">
+                    <a class="menu--nav-item">Sign up</a>
+                    <a class="menu--nav-item">Login</a>
+                    <button class="menu--nav-item menu--nav-item-orange">EN</button>
+                    <img onclick="dropdownMenu('.submeni--nav')" class="language-arrow" src="./image/language-arrow.png"
+                        alt="language-arrow">
+                    <div class="submeni--nav">
+                        <img class="submeni--nav-arrow-up" src="./image/arrow.png" alt="language-arrow2">
+                        <img class="submeni--nav-arroe-up-tablet" src="./image/arrow-point-to-right-black.png"
+                            alt="language-arrow-tablet">
+                        <button onclick="changeEn('.menu--nav-item-orange')" class="submeni--nav-item">English</button>
+                        <button onclick="changeGe('.menu--nav-item-orange')" class="submeni--nav-item">German</button>
+                    </div>
+                </div>
+            </nav>
+            <div onclick="hamburgerMenu()" class="hamburger-menu">
+                <img onclick="iconChange()" class="hamburger-menu-icon" src="./image/menu.png">
+            </div>
+        </div>
+        <div class="article-left">
+            <h1>Experience The World</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit
+                Alias, voluptatibus minima suscipit dolore, distinctio voluptate.
+            </p>
+            <div class="stories">
+                <button class="orange--button">Explore all</button>
+                <button class="you-tube-stories">Watch Storie</button>
+            </div>
+        </div>
+    </header>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
