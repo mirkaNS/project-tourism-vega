@@ -16,8 +16,13 @@
         }
         .carousel-content {
             text-align: right;
+            float: right;
             @include mq(mobile) {
                 text-align: left;
+                float: left;
+            }
+            &:after {
+                clear:both;
             }
         }
         .carousel-holder--img{
@@ -29,6 +34,9 @@
             border-radius: 5px;
             position: relative;
             margin-right: 20px;
+            &:nth-child(3) {
+                margin-right: 0;
+            }
              &:after {
                 content: '';
                 position: absolute;
@@ -60,7 +68,7 @@
         .arrow-prev{
             position: absolute;
             top: 193px;
-            left: 100px;
+            left: 165px;
             @include mq(mobile) {
                 left: 25px;
             }

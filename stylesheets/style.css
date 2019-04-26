@@ -21,7 +21,7 @@ body {
   background: url("../image/4k-wallpaper-background-beautiful-853199.jpg") no-repeat;
   background-size: cover;
   position: relative;
-  width: 1640px;
+  width: 100%;
   max-width: 100%;
   margin: 0 auto;
   padding: 0 14.024%;
@@ -793,14 +793,20 @@ body {
 /* line 17, ../sass/_carousel.scss */
 .carousel .carousel-holder .carousel-content {
   text-align: right;
+  float: right;
 }
 @media only screen and (max-width: 768px) {
   /* line 17, ../sass/_carousel.scss */
   .carousel .carousel-holder .carousel-content {
     text-align: left;
+    float: left;
   }
 }
-/* line 23, ../sass/_carousel.scss */
+/* line 24, ../sass/_carousel.scss */
+.carousel .carousel-holder .carousel-content:after {
+  clear: both;
+}
+/* line 28, ../sass/_carousel.scss */
 .carousel .carousel-holder .carousel-holder--img {
   display: inline-block;
   width: 280px;
@@ -811,7 +817,11 @@ body {
   position: relative;
   margin-right: 20px;
 }
-/* line 32, ../sass/_carousel.scss */
+/* line 37, ../sass/_carousel.scss */
+.carousel .carousel-holder .carousel-holder--img:nth-child(3) {
+  margin-right: 0;
+}
+/* line 40, ../sass/_carousel.scss */
 .carousel .carousel-holder .carousel-holder--img:after {
   content: '';
   position: absolute;
@@ -822,13 +832,13 @@ body {
   background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.5));
   border-radius: 5px;
 }
-/* line 42, ../sass/_carousel.scss */
+/* line 50, ../sass/_carousel.scss */
 .carousel .carousel-holder .carousel-holder--img img {
   height: 100%;
   border-radius: 5px;
   min-width: 100%;
 }
-/* line 47, ../sass/_carousel.scss */
+/* line 55, ../sass/_carousel.scss */
 .carousel .carousel-holder .carousel-holder--img span {
   bottom: 22px;
   left: 22px;
@@ -838,23 +848,23 @@ body {
   color: #FFFFFF;
   z-index: 10;
 }
-/* line 57, ../sass/_carousel.scss */
+/* line 65, ../sass/_carousel.scss */
 .carousel .carousel-holder .carousel-holder--img:nth-child(3) {
   width: 180px;
 }
-/* line 60, ../sass/_carousel.scss */
+/* line 68, ../sass/_carousel.scss */
 .carousel .carousel-holder .arrow-prev {
   position: absolute;
   top: 193px;
-  left: 100px;
+  left: 165px;
 }
 @media only screen and (max-width: 768px) {
-  /* line 60, ../sass/_carousel.scss */
+  /* line 68, ../sass/_carousel.scss */
   .carousel .carousel-holder .arrow-prev {
     left: 25px;
   }
 }
-/* line 68, ../sass/_carousel.scss */
+/* line 76, ../sass/_carousel.scss */
 .carousel .carousel-holder .arrow-next {
   position: absolute;
   top: 193px;
@@ -862,44 +872,44 @@ body {
   transform: rotate(180deg);
 }
 @media only screen and (max-width: 768px) {
-  /* line 68, ../sass/_carousel.scss */
+  /* line 76, ../sass/_carousel.scss */
   .carousel .carousel-holder .arrow-next {
     right: 15px;
   }
 }
-/* line 78, ../sass/_carousel.scss */
+/* line 86, ../sass/_carousel.scss */
 .carousel .text-explore {
   padding-left: 28.048%;
   margin-top: 122px;
 }
 @media only screen and (max-width: 768px) {
-  /* line 78, ../sass/_carousel.scss */
+  /* line 86, ../sass/_carousel.scss */
   .carousel .text-explore {
     text-align: center;
     padding: 0 20px;
     margin-top: 30px;
   }
 }
-/* line 86, ../sass/_carousel.scss */
+/* line 94, ../sass/_carousel.scss */
 .carousel .text-explore h1 {
   font-size: 28px;
   font-family: MontserratBold;
   color: #2F797A;
 }
 @media only screen and (min-width: 768px) and (max-width: 1240px) {
-  /* line 86, ../sass/_carousel.scss */
+  /* line 94, ../sass/_carousel.scss */
   .carousel .text-explore h1 {
     font-size: 23px;
     margin-top: 102px;
   }
 }
 @media only screen and (max-width: 768px) {
-  /* line 86, ../sass/_carousel.scss */
+  /* line 94, ../sass/_carousel.scss */
   .carousel .text-explore h1 {
     display: none;
   }
 }
-/* line 98, ../sass/_carousel.scss */
+/* line 106, ../sass/_carousel.scss */
 .carousel .text-explore p {
   font-size: 16px;
   font-family: MontserratRegular;
@@ -907,20 +917,20 @@ body {
   padding-top: 48px;
 }
 @media only screen and (min-width: 768px) and (max-width: 1240px) {
-  /* line 98, ../sass/_carousel.scss */
+  /* line 106, ../sass/_carousel.scss */
   .carousel .text-explore p {
     font-size: 14px;
     padding-top: 43px;
   }
 }
 @media only screen and (max-width: 768px) {
-  /* line 98, ../sass/_carousel.scss */
+  /* line 106, ../sass/_carousel.scss */
   .carousel .text-explore p {
     font-size: 14px;
     padding-top: 0;
   }
 }
-/* line 112, ../sass/_carousel.scss */
+/* line 120, ../sass/_carousel.scss */
 .carousel .text-explore button {
   font-size: 14px;
   font-family: MontserratMedium;
@@ -933,25 +943,25 @@ body {
   margin: 45px 0 183px 0;
 }
 @media only screen and (min-width: 768px) and (max-width: 1240px) {
-  /* line 112, ../sass/_carousel.scss */
+  /* line 120, ../sass/_carousel.scss */
   .carousel .text-explore button {
     margin: 48px 0 137px 0;
   }
 }
 @media only screen and (max-width: 768px) {
-  /* line 112, ../sass/_carousel.scss */
+  /* line 120, ../sass/_carousel.scss */
   .carousel .text-explore button {
     display: none;
   }
 }
-/* line 122, ../sass/_carousel.scss */
+/* line 130, ../sass/_carousel.scss */
 .carousel .text-explore button:hover {
   background: #C54B1B;
 }
 
 /* line 1, ../sass/_tickets.scss */
 section {
-  width: 1640px;
+  width: 100%;
   max-width: 100%;
   margin: 0 auto;
   padding: 0 14.024%;
@@ -1742,7 +1752,7 @@ section h1 {
 
 /* line 1, ../sass/_headings.scss */
 .container {
-  width: 1640px;
+  width: 100%;
   max-width: 100%;
   margin: 0 auto;
   padding: 0 14.024%;
@@ -2035,7 +2045,7 @@ section h1 {
 }
 /* line 3, ../sass/_footer.scss */
 .main-footer .footer-top {
-  width: 1640px;
+  width: 100%;
   max-width: 100%;
   margin: 0 auto;
   padding: 0 14.024%;
@@ -2137,7 +2147,7 @@ section h1 {
   height: 57px;
   background: #2F797A;
   bottom: 0;
-  width: 1640px;
+  width: 100%;
   max-width: 100%;
   margin: 0 auto;
   padding: 0 14.024%;

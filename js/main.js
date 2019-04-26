@@ -131,11 +131,41 @@ function next() {
     caroselHolder.removeChild(image);
     caroselHolder.insertBefore(image, caroselHolder.firstChild);
 }
-function setCarouselSize() {
+
+function loadJSON(callback) {
+
+    var xobj = new XMLHttpRequest();
+    xobj.overrideMimeType("application/json");
+    xobj.open('GET', 'js/carousel.json', true);
+    xobj.onreadystatechange = function () {
+        if (xobj.readyState == 4 && xobj.status == "200") {
+            callback(xobj.responseText);
+        }
+    };
+    xobj.send(null);
+}
+
+function createCarousel() {
+  loadJSON(function(response) {
+    // Parse JSON string into object
+    var images = JSON.parse(response);
+    var carouselHolder = document.querySelector(".carousel-content");
+    for (var i = 0; i < images.length; i++) {
+      var node = document.createElement("div");
+      node.classList.add("carousel-holder--img");
+      var img = document.createElement("img");
+      img.src = images[i].path;
+      node.appendChild(img);
+      var span = document.createElement("span");
+      span.innerHTML = images[i].description;
+      node.appendChild(span);
+      carouselHolder.appendChild(node);
+    }
     var width = 0;
     var images = document.querySelectorAll(".carousel-holder--img");
     for (var i = 0; i < images.length; i++) {
-        width += images[i].clientWidth + 50;
+      width += images[i].clientWidth + 50;
     }
-    document.querySelector('.carousel-content').style.width = width + "px";
+    document.querySelector(".carousel-content").style.width = width + "px";
+  });
 }

@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./stylesheets/style.css">
 </head>
 
-<body onload="setCarouselSize()">
+<body onload="createCarousel()">
     <header class="main-header">
         <div class="region-poup-youtube">
             <iframe src="https://www.youtube.com//embed/Sk7FGRnMjGQ"></iframe>
@@ -96,20 +96,7 @@
             <button>Explore All</button>
         </div>
         <div class="carousel-holder">
-            <div class="carousel-content">
-                <div class="carousel-holder--img">
-                    <img src="./image/image.jpg" alt="image-Novi Sad">
-                    <span class="city-img1">Novi Sad, Serbia</span>
-                </div>
-                <div class="carousel-holder--img">
-                    <img src="./image/image copy (1).jpg" alt="image-Amsterdam">
-                    <span class="city-img2">Amsterdam, Netherlands</span>
-                </div>
-                <div class="carousel-holder--img">
-                    <img src="./image/image copy (2).jpg" alt="image-Bahamas">
-                    <span class="city-img3">The Bahamas</span>
-                </div>
-            </div>
+            <div class="carousel-content"></div>
             <img src="./image/arrow1.png" onclick="prev()" class="arrow-prev" alt="arrow">
             <img src="./image/arrow1.png" onclick="next()" class="arrow-next" alt="arrow">
         </div>
