@@ -1,0 +1,126 @@
+.carousel{
+    display: grid;
+    grid-template-columns: 49% auto;
+    @include mq(mobile){
+        grid-template-columns: auto;
+        padding-bottom: 65px;
+    }
+    .carousel-holder{
+        overflow: hidden;
+        position: relative;
+        margin-top: 122px;
+        margin-left: 10px;
+        height: 414px;
+        @include mq(mobile){
+            margin: 40px 0 0 20px;
+        }
+        .carousel-content {
+            text-align: right;
+            @include mq(mobile) {
+                text-align: left;
+            }
+        }
+        .carousel-holder--img{
+            display: inline-block;
+            width: 280px;
+            height: 413px;
+            overflow: hidden;
+            text-align: center;
+            border-radius: 5px;
+            position: relative;
+            margin-right: 20px;
+             &:after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left:0;
+                height: 100%;
+                width: 100%;
+                background: linear-gradient(to bottom,transparent, rgba(0, 0, 0, 0.5));
+                border-radius: 5px;
+            }
+            img{
+                height: 100%;
+                border-radius: 5px;
+                min-width: 100%;
+            }
+            span{
+                bottom: 22px;
+                left: 22px;
+                position: absolute;
+                font-size: 14px;
+                font-family: MontserratBold;
+                color: $color-nav;
+                z-index: 10;
+            }
+        }
+        .carousel-holder--img:nth-child(3){
+            width: 180px;
+        }
+        .arrow-prev{
+            position: absolute;
+            top: 193px;
+            left: 100px;
+            @include mq(mobile) {
+                left: 25px;
+            }
+        }
+        .arrow-next{
+            position: absolute;
+            top: 193px;
+            right: 27px;
+            transform: rotate(180deg);
+            @include mq(mobile) {
+                right: 15px;
+            }
+        }
+    }
+    .text-explore{
+        padding-left: 28.048%;
+        margin-top: 122px;
+        @include mq(mobile){
+            text-align: center;
+            padding: 0 20px;
+            margin-top: 30px;
+        }
+        h1{
+            font-size: 28px;
+            font-family: MontserratBold;
+            color: $color-mint;
+            @include mq(tablet){
+             font-size: 23px; 
+             margin-top: 102px;  
+            }
+            @include mq(mobile){
+             display: none;  
+            }
+        }
+        p{
+            font-size: 16px;
+            font-family: MontserratRegular;
+            color: black;
+            padding-top: 48px;
+            @include mq(tablet){
+             font-size: 14px;   
+             padding-top: 43px;
+            }
+            @include mq(mobile){
+             font-size: 14px;   
+             padding-top: 0;
+            }
+        }
+        button{
+            @include button();
+            margin: 45px 0 183px 0;
+            @include mq(tablet){
+             margin: 48px 0 137px 0;
+            }
+            @include mq(mobile){
+                display: none;
+            }
+        }
+        button:hover{
+            background: $color-orange-hover;
+        }
+    }
+}

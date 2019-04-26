@@ -1,0 +1,99 @@
+.container{
+    @include width();
+    @include mq(tablet){
+        padding: 0 8.072%;
+    }
+    @include mq(mobile){
+        padding: 0 5.33%;
+        margin-top: 87px;
+    }
+    h1{
+        font-size: 28px;
+        font-family: MontserratMedium;
+        padding: 115px 0 54px 0;
+        line-height: 20px;
+        color: $color-dark;
+        @include mq(tablet){
+            font-size: 23px;
+            padding: 76px 0 34px 0;
+            line-height: 16px;
+        }
+        @include mq(mobile){
+            font-size: 23px;
+            padding: 45px 0 34px 0;
+            line-height: 16px;
+        }
+    }
+    p{
+        font-size: 16px;
+        font-family: MontserratRegular;
+        color: $color-dark;
+        @include mq(tablet){
+            font-size: 14px;
+        }
+        @include mq(mobile){
+            font-size: 14px;
+            line-height: 23px;
+        }
+        .orange{
+            color: $color-orange;
+            text-decoration: none;
+        }
+        .orange:hover{
+            text-decoration: underline;
+        }
+        .mob-hidden{
+            @include mq(mobile){
+                display: none;
+            }
+        }
+    }
+    .last-text{
+        margin-bottom: 125px;
+        @include mq(tablet){
+            margin-bottom: 77px;
+        }
+         @include mq(mobile){
+            margin-bottom: 77px;
+        }
+    }
+    h2{
+        font-size: 23px;
+        margin: 62px 0 53px 0;
+        font-family: MontserratMedium;
+        color: $color-dark;
+        @include mq(tablet){
+            font-size: 18px;
+            margin: 52px 0 43px 0;
+        }
+        @include mq(mobile){
+            font-size: 18px;
+            margin: 66px 0 35px 0;
+        }
+    }
+   
+   ul{
+        list-style-position: inside;
+        padding: 0;
+        @include mq(mobile){
+            margin-top: 57px;
+        }
+        li{
+            font-size: 16px;
+            font-family: MontserratRegular;
+            margin: 27px 0;
+            color: $color-dark;
+            @include mq(tablet){
+                font-size: 14px;
+            }
+            @include mq(mobile){
+                font-size: 14px;
+            }
+        }
+        .mob-hidden{
+            @include mq(mobile){
+              display: none;
+            } 
+        }
+    } 
+}

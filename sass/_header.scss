@@ -1,0 +1,531 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.main-header{
+    background: url("../image/4k-wallpaper-background-beautiful-853199.jpg") no-repeat;
+    background-size: cover;
+    position: relative;
+    @include width();
+    @include mq(tablet){
+        background: url("../image/4k-wallpaper-background-beautiful-853199-tablet.jpg") no-repeat;
+        background-size: cover;
+        padding: 0;
+    }
+    @include mq(mobile){
+        background: url("../image/4k-wallpaper-background-beautiful-853199-mobile.jpg") no-repeat;
+        background-size: cover;
+        padding: 0;
+    }
+    .region-poup-youtube{
+        display: none;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        background: rgba(0, 0, 0, 0.5);
+        top: 0;
+        left: 0;
+        justify-content: center;
+        align-items: center;
+        iframe{
+            width: 764px;
+            height: 429px;
+            border: none;
+            @include mq(tablet){
+                width: 520px;
+                height: 295px;
+            }
+            @include mq(mobile){
+                width: 318px;
+                height: 180px;
+            }
+        }
+        .close-video{
+            position: absolute;
+            top: 244px;
+            right: 264px;
+            @include mq(tablet){
+                top: 295px;
+                right: 243px;
+            }
+            @include mq(mobile){
+                top: 330px;
+                right: 118px;
+            }
+        }
+    }
+}
+.region-header{
+    display: flex;
+    height: 80px;
+    background: $color-nav;
+    align-items: center;
+    position: relative;
+    @include mq(tablet){
+        display: block;
+        height: 80px;
+    }
+    @include mq(mobile){
+        display: block;
+        height: 69px;
+    }
+    .header--logo{
+        margin-right: 15px;
+        margin-left: 30px;
+        @include mq(tablet){
+            padding-top: 24px;
+        }
+        @include mq(mobile){
+            padding-top: 20px;
+        }
+    }
+    .header--menu--navigation-first{
+        @include mq(tablet){
+            display: none;
+            height: 385px;
+            width: 100%;
+            background: $color-drop;
+            margin: 20px 0 0 0;
+        }
+        @include mq(mobile){
+            display: none;
+            height: 320px;
+            width: 100%;
+            background: $color-drop;
+            margin: 0;
+            margin-top: 17px;
+        }
+        .menu--nav{
+            margin: 0;
+            padding-left: 0;
+            @include mq(tablet){
+                padding-top: 70px;
+            }
+            @include mq(mobile){
+                padding-top: 45px;
+            }
+            .menu--nav-item{
+                float: left;
+                list-style-type: none;
+                font-family: MontserratBold;
+                font-size: 14px;
+                @include mq(tablet){
+                    float: unset;
+                    text-align: center;
+                    font-size: 22px;
+                    padding-bottom: 40px;
+                }
+                @include mq(mobile){
+                    float: unset;
+                    text-align: center;
+                    font-size: 22px;
+                    padding-bottom: 40px;
+                }
+                .menu--nav-link{
+                text-decoration: none;
+                color: $color-black;
+                padding: 28px 15px 28px 15px;
+                }
+                .menu--nav-link:hover{
+                    @include mq(tablet){
+                        color: $color-orange;
+                    }
+                    @include mq(mobile){
+                        color: $color-orange;
+                    }
+                }
+            }    
+            .menu--nav-link:hover{
+                border-bottom: 3px solid $color-orange;
+                @include mq(tablet){
+                    border-bottom: unset;
+                }
+                @include mq(mobile){
+                    border-bottom: unset;
+                }
+            }
+            .menu--nav-link:active{
+                background: $color-active;
+            }
+        }
+    }
+    .header--serch{
+        position: absolute;
+        height: 100%;
+        width: calc(100% - 450px);
+        left: 157px;
+        @include mq(tablet){
+            width: calc(100% - 289px);
+            top: 20px;
+        }
+        @include mq(mobile){
+            width: calc(100% - 125px);
+            left: 20px;
+            top: -8px;
+        }
+        .search-open{
+            visibility: visible;
+            position: absolute;
+            top: 30px;
+            right: -35px;
+            @include mq(tablet){
+                top: 8px;
+                right: -50px;
+            }
+        }
+        .nav--search{
+          display: none;
+          width: 100%;
+            .text-search{
+                width: 100%;
+                padding: 0px 0px 0px 40px;
+                line-height: 44px;
+                margin-bottom: 16px;
+                background: #F3F5F9;
+                border: none;
+                font-family: MontserratRegular;
+                background-image: url("../image/icon-search.png");
+                background-repeat: no-repeat;
+                background-position: 15px;
+                margin-top: 21px;
+                @include mq(tablet){
+                   margin: 0;
+                }
+            }
+            .icon-close{
+                position: absolute;
+                top: 38px;
+                right: -16px;
+                @include mq(tablet){
+                    top: 16px;
+                }
+            }
+        }
+    }
+    .header--menu--navigation-second{
+        margin-left: auto;
+        @include mq(tablet){
+            display: none;
+            width: 100%;
+            height:1228px;          
+            background: $color-drop;
+            padding-top: 20px;
+        }
+        @include mq(mobile){
+            display: none;
+            width: 100%;
+            height: 1360px;
+            background: $color-drop;
+            padding-top: 55px;
+        }
+        .menu--nav{
+            position: relative;
+            .menu--nav-item{
+                font-family: MontserratBold;
+                font-size: 14px;
+                color: $color-black;
+                text-decoration: none;
+                padding: 28px 15px 28px 15px;
+                @include mq(tablet){
+                    float: unset;
+                    text-align: center;
+                    font-size: 22px;
+                    display: block;
+                    padding-bottom: 40px;
+                    padding-top: 0;
+                }
+                @include mq(mobile){
+                    float: unset;
+                    text-align: center;
+                    font-size: 22px;
+                    display: block;
+                    padding-top: 0;
+                    padding-bottom: 40px;
+                }
+            }
+            .menu--nav-item:hover{
+                @include mq(tablet){
+                    color:$color-orange;
+                }
+                @include mq(mobile){
+                    color:$color-orange;
+                }
+            }
+            .menu--nav-item-language{
+                color: $color-orange;
+                padding: 28px 15px 28px 15px;
+                background: $color-nav;
+                border: none;
+                outline: none;
+                background-image: url("../image/language-arrow.png");
+                background-repeat: no-repeat;
+                background-position: right;
+                font-family: MontserratBold;
+                font-size: 14px;
+                @include mq(tablet){
+                  display: none;
+                }
+                @include mq(mobile){
+                   display: none;
+                }
+            }
+            .only-mob{
+                display: none;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                text-indent: 1px;
+                text-overflow: '';
+                outline: none;
+                @include mq(tablet){
+                    display: block;
+                    font-size: 18px;
+                    font-family: MontserratBold;
+                    border-radius: 7px;
+                    margin: 0 auto;
+                    color: $color-black;
+                    border: 1px solid #a8a8a7;
+                    padding: 20px 71px 20px 29px;
+                    background: $color-drop;
+                    background: url("../image/arrow-point-to-right-black.png") no-repeat right;
+                    background-position: 127px;
+                }
+                @include mq(mobile){
+                    display: block;
+                    font-size: 18px;
+                    font-family: MontserratBold;
+                    border-radius: 7px;
+                    margin: 0 auto;
+                    color: $color-black;
+                    border: 1px solid #a8a8a7;
+                    padding: 20px 71px 20px 29px;
+                    background: $color-drop;
+                    background: url("../image/arrow-point-to-right-black.png") no-repeat right;
+                    background-position: 127px;
+                }
+            }
+            .submeni--nav{
+                display: none;
+                width: 113px;
+                height: 70px;
+                background-color: $color-nav;
+                position: absolute;
+                top: 50px;
+                right: 0;
+                border: 1px solid $color-with;
+                border-radius: 5px;
+                .submeni--nav-item{
+                    position: relative;
+                    list-style-type: none;
+                    font-size: 14px;
+                    font-family: MontserratBold;
+                    color: $color-black;
+                    background: $color-nav;
+                    border: none;
+                    display: block;
+                    margin-top: 11px;
+                    .submeni--nav-arrow-up{
+                        top: -17px;
+                        right: 20px;
+                        position: absolute;
+                    }
+                }    
+            }
+        }
+    }
+    .hamburger-menu{
+        visibility: hidden;
+        @include mq(tablet){
+            visibility: visible;
+            position: absolute;
+            top: 30px;
+            right: 20px;
+        } 
+        @include mq(mobile){
+            visibility: visible;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+    }
+}
+.article{
+    margin-top: 139px;
+    height: 773px;
+    @include mq(tablet){
+        padding: 0 3.125%;
+        margin-top: 105px;
+    }
+    @include mq(mobile){
+        padding: 0 5.33%;
+        margin-top: 70px;
+    }
+    .article--title{
+        font-size: 80px;
+        font-family: MontserratBold;
+        color: $color-nav;
+        margin: 0;
+        width: 50%;
+        @include mq(tablet){
+            font-size: 55px;
+            line-height: 69px;
+        }
+        @include mq(mobile){
+            font-size: 45px;
+            width: 100%;
+        }
+    }
+    .article--description{
+        font-size: 16px;
+        line-height: 27px;
+        font-family: MontserratMedium;
+        color: $color-nav;
+        margin: 0;
+        margin-top: 60px;
+        width: 50%;
+        @include mq(tablet){
+            margin-top: 45px;
+        }
+        @include mq(mobile){
+            margin-top: 40px;
+            font-size: 14px;
+            width: 100%;
+        }
+    }
+    .article-main{
+        display: grid;
+        grid-template-columns: auto auto;
+        @include mq(tablet){
+            grid-template-columns: auto;
+        }
+        @include mq(mobile){
+            grid-template-columns: auto;
+        }
+        .article-stories-left{
+            margin-top: 83px;
+            @include mq(tablets){
+                margin-top: 75px;
+             }
+            @include mq(mobile){
+                margin-top: 50px;
+            }
+            .orange--button{
+                @include button();
+                margin-right: 21px;
+                background: $color-orange;
+                 @include mq(mobile){
+                    font-size: 14px;
+                    margin-right: 5px;
+                }
+            }
+            .orange--button:hover{
+                background: $color-orange-hover;
+            }
+            .you-tube-stories{
+                @include button();
+                background: url("../image/icon-play.png") no-repeat left;
+                background-position: 13px;
+                border: 1px solid $color-nav;
+                width: 168px;
+                @include mq(mobile){
+                    font-size: 14px;
+                }
+            }
+            .you-tube-stories:hover{
+                background: $color-with;
+                background-image: url("../image/icon-play-orange.png");
+                background-repeat: no-repeat;
+                background-position: 10px;
+                color: $color-orange;
+            }
+        }
+        .article-stories-right{
+            display: inline-block;
+            margin-top: 80px;
+            @include mq(tablet){
+                margin-top: 75px;
+            }
+            @include mq(mobile){
+                margin-top: 115px;
+                display: flex;
+                flex-direction: column-reverse;
+            }
+            .article-user{
+                float: right;
+                .article-user-image{
+                    width: 45px;
+                    height: 45px;
+                    border-radius: 20px;
+                    margin-left: 20px;
+                    margin-bottom: 45px;
+                    background: $color-orange;
+                    @include mq(mobile){
+                        float: right;
+                        margin-left: 10px;
+                        margin-bottom: 0;
+                    }
+                }
+                .article-user-name{
+                    font-size: 14px;
+                    font-family: MontserratBold;
+                    color: #2e2d2c;
+                    margin: 0;
+                    transform: rotate(270deg);
+                    @include mq(mobile){
+                        text-align: right;
+                        transform: none;
+                    }
+                }
+                .article-user-contry{
+                    font-size: 12px;
+                    font-family: MontserratRegular;
+                    color: #2e2d2c;
+                    transform: rotate(270deg);
+                    margin: 0px;
+                    padding-left: 36px;
+                    padding-top: 36px;
+                    @include mq(mobile){
+                        text-align: right;
+                        transform: none;
+                        padding: 0;
+                    }
+                }    
+            }
+            .article-review{
+                background: url("../image/left-quote\ copy.png") no-repeat left;
+                background-position: top left;
+                float: right;
+                padding-top: 23px;
+                padding-left: 50px;
+                @include mq(mobile){
+                    margin-top: 0;
+                    padding-top: 0;
+                }
+                .article-review-title{
+                    font-size: 16px;
+                    font-family: MontserratBold;
+                    color: #2e2d2c;
+                    margin: 0;
+                    @include mq(mobile){
+                        text-align: right;
+                    }
+                }
+                .article-review-comment{
+                    font-size: 12px;
+                    font-family: MontserratRegular;
+                    color: #2e2d2c;
+                    width: 272px;
+                    margin: 0;
+                    margin-top: 22px;
+                    height: 100px;
+                    @include mq(mobile){
+                        text-align: right;
+                        margin-top: 18px;
+                        margin-bottom: 18px;
+                        height: unset;
+                    }
+                }
+            }
+        }
+    }
+}

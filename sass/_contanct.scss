@@ -1,0 +1,87 @@
+.contanct{
+    background: url("../image/Vector\ Smart\ Object\ copy\ \(1\).png") left 170px bottom 167px, url("../image/Vector\ Smart\ Object\ copy.png") left 600px bottom 148px,  $color-with;
+    background-repeat: no-repeat;
+    @include mq(tablet){
+        background: $color-with;
+    }
+    @include mq(mobile){
+        background: $color-with;
+    }
+    h1{
+        padding: 72px 0 80px 0;
+        color: $color-black;
+        @include mq(tablet){
+            padding: 64px 0 60px 0;
+        }
+        @include mq(mobile){
+          padding: 57px 0 42px 0;
+        }
+    }
+    form{
+        float: right;
+        font-size: 14px;
+        font-family: MontserratBold;
+        background: $color-with;
+        width: 45%;
+        color: $color-grey-dark;
+        @include mq(tablet){
+            width: 100%;
+        }
+        @include mq(mobile){
+            width: 100%;
+            font-size: 12px;
+        }
+        input{
+            padding-left: 20px;
+            height: 60px;
+            margin: 14px 0 20px 0; 
+            width: 100%;
+            font-size: 16px;
+            background: $color-with;
+            font-family: MontserratMedium;
+            color: #878787;
+            border-radius: 5px;
+            border: 1px solid #A8A8A7;
+            @include mq(tablet){
+                width: -webkit-fill-available;
+            }
+            @include mq(mobile){
+                width: -webkit-fill-available;
+                height: 44px;
+            }
+        }
+        .text-message{
+            padding-bottom: 115px;
+            @include mq(mobile){
+                padding-bottom: 60px;
+                padding-top: 8px;
+            }
+        }
+        .checkbox{
+            width: unset;
+            height: unset;
+            margin: 0 0 35px 0;
+        }
+        .orange{
+            color: $color-orange;
+        }
+        .button-send{
+            margin-bottom: 102px;
+            @include button();
+            width: 176px;
+            margin-top: 0;
+            padding: 0 36px;
+            @include mq(tablet){
+                margin-bottom: 114px;
+            }
+        }
+        .button-send:hover{
+            background: $color-orange-hover;
+        }
+    }
+}
+.clearfix:after {
+    content: "";
+    clear: both;
+    display: block;
+}

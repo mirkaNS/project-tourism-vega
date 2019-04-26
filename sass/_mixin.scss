@@ -1,0 +1,18 @@
+@mixin width(){
+    width: 1640px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 14.024%;
+    box-sizing: border-box;
+  }
+
+@mixin button(){
+    font-size: 14px;
+    font-family: MontserratMedium;
+    color: $color-nav;
+    width: 144px;
+    height: 49px;
+    border-radius: 5px;
+    background: $color-orange;
+    border: none;
+}

@@ -1,0 +1,15 @@
+@mixin mq($value_mq){
+    @if $value_mq == 'mobile'{
+        @media only screen and (max-width: 768px){
+            @content;
+        }
+    }@else if $value_mq == "tablet"{
+        @media only screen and (min-width: 768px) and (max-width: 1240px){
+            @content;
+        }
+    }@else if $value_mq == "dekstop"{
+        @media only screen and (min-width: 1240px) and (max-width: 1640px){
+            @content;
+        }
+    }        
+}

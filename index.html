@@ -9,70 +9,325 @@
     <link rel="stylesheet" href="./stylesheets/style.css">
 </head>
 
-<body>
+<body onload="setCarouselSize()">
     <header class="main-header">
+        <div class="region-poup-youtube">
+            <iframe src="https://www.youtube.com//embed/Sk7FGRnMjGQ"></iframe>
+            <img src="./image/icon-x.png" onclick="closeVideo()" class="close-video" alt="close-icon">
+        </div>
         <div class="region-header">
-            <div class="block block--region">
-                <img src="./image/header-logo.png" alt="logo">
+            <div class="header--logo">
+                <img src="./image/header-logo copy.png" alt="logo">
             </div>
-            <nav rol="navigation" class="block block--menu--navigation-first">
+            <nav rol="navigation" class="header--menu--navigation-first">
                 <ul class="menu--nav">
-                    <a class="menu--nav-link" href="./">
-                        <li class="menu--nav-item">Home</li>
-                    </a>
-                    <a class="menu--nav-link" href="./">
-                        <li class="menu--nav-item">Discover</li>
-                    </a>
-                    <a class="menu--nav-link" href="./">
-                        <li class="menu--nav-item">About us</li>
-                    </a>
-                    <a class="menu--nav-link" href="./">
-                        <li class="menu--nav-item">Contact</li>
-                    </a>
-                    <a class="menu--nav-link" href="./">
-                        <li class="menu--nav-item">Help</li>
-                    </a>
+                    <li class="menu--nav-item"><a href="#" class="menu--nav-link">Home</a></li>
+                    <li class="menu--nav-item"><a href="#" class="menu--nav-link">Discover</a></li>
+                    <li class="menu--nav-item"><a href="#" class="menu--nav-link">About us</a></li>
+                    <li class="menu--nav-item"><a href="#" class="menu--nav-link">Contact</a></li>
+                    <li class="menu--nav-item"><a href="#" class="menu--nav-link">Help</a></li>
                 </ul>
             </nav>
-            <div class=" block block--serch">
-                <img class="search-open" src="./image/icon-search.png" onclick="searchFiled('.nav--search')">
+            <div class="header--serch">
+                <img src="./image/icon-search.png" onclick="searchFiled('.nav--search')" class="search-open"
+                    alt="icon-search">
                 <form class="nav--search">
                     <input class="text-search" type="text" name="search" placeholder="Search text">
-                    <img class="icon-search" src="./image/icon-search.png">
-                    <img class="icon-close" src="./image/x-icon.png" onclick="closeFiled('.nav--search')">
+                    <img src="./image/x-icon.png" onclick="closeFiled('.nav--search')" class="icon-close"
+                        alt="close-icon">
                 </form>
             </div>
-            <nav rol="navigation" class="block block--menu--navigation-second">
+            <nav rol="navigation" class="header--menu--navigation-second">
                 <div class="menu--nav">
-                    <a class="menu--nav-item">Sign up</a>
-                    <a class="menu--nav-item">Login</a>
-                    <button class="menu--nav-item menu--nav-item-orange">EN</button>
-                    <img onclick="dropdownMenu('.submeni--nav')" class="language-arrow" src="./image/language-arrow.png"
-                        alt="language-arrow">
-                    <div class="submeni--nav">
-                        <img class="submeni--nav-arrow-up" src="./image/arrow.png" alt="language-arrow2">
-                        <img class="submeni--nav-arroe-up-tablet" src="./image/arrow-point-to-right-black.png"
-                            alt="language-arrow-tablet">
-                        <button onclick="changeEn('.menu--nav-item-orange')" class="submeni--nav-item">English</button>
-                        <button onclick="changeGe('.menu--nav-item-orange')" class="submeni--nav-item">German</button>
-                    </div>
+                    <a href="#" class="menu--nav-item">Sign up</a>
+                    <a href="#" class="menu--nav-item">Login</a>
+                    <button onclick="dropdownMenu('.submeni--nav')" class="menu--nav-item-language">EN</button>
+                    <select class="only-mob">
+                        <option value="English">English</option>
+                        <option value="German">German</option>
+                        <option value="French">French</option>
+                    </select>
+                    <ul class="submeni--nav">
+                        <li class="submeni--nav-item"><img src="./image/arrow.png" class="submeni--nav-arrow-up"
+                                alt="language-arrow2"></li>
+                        <li class="submeni--nav-item" onclick="changeEn('.menu--nav-item-language')">English</li>
+                        <li class="submeni--nav-item" onclick="changeGe('.menu--nav-item-language')">German</li>
+                    </ul>
                 </div>
             </nav>
             <div onclick="hamburgerMenu()" class="hamburger-menu">
-                <img onclick="iconChange()" class="hamburger-menu-icon" src="./image/menu.png">
+                <img src="./image/menu.png" onclick="iconChange()" class="hamburger-menu-icon" alt="hamburger-menu">
             </div>
         </div>
-        <div class="article-left">
-            <h1>Experience The World</h1>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit
-                Alias, voluptatibus minima suscipit dolore, distinctio voluptate.
+        <div class="article">
+            <h1 class="article--title">Experience The World</h1>
+            <p class="article--description">Lorem ipsum dolor, sit amet consectetur adipisicing elit
+                Alias, voluptatibus minima suscipit dolore distinctio sit amet consectetur adipisicing elit.
             </p>
-            <div class="stories">
-                <button class="orange--button">Explore all</button>
-                <button class="you-tube-stories">Watch Storie</button>
+            <div class="article-main">
+                <div class="article-stories-left">
+                    <button class="orange--button">Explore all</button>
+                    <button onclick="watchStorie()" class="you-tube-stories"> Watch Storie</button>
+                </div>
+                <div class="article-stories-right">
+                    <div class="article-user">
+                        <img class="article-user-image" src="./image/46.jpg" class="user-image" alt="user-image">
+                        <h3 class="article-user-name">Jamie Diaz</h3>
+                        <p class="article-user-contry">Serbia</p>
+                    </div>
+                    <div class="article-review">
+                        <h3 class="article-review-title">Best travel guide</h3>
+                        <p class="article-review-comment">Lorem ipsum dolor sit amet consectetur adipisicing. Iusto ab
+                            ducimus maxime illo laborum enim odit est ducimus maxime.
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
+    <!-- carousel -->
+    <div class="carousel">
+        <div class="text-explore">
+            <h1>Most popular destinations</h1>
+            <p>Take a look at the Best Places to Travel in 2019 for additional
+                inspiration and if you already know where you're going this
+                coming year, share your plans with us on social media with
+                #TLBestPlacesthis link opens in a new tab.</p>
+            <button>Explore All</button>
+        </div>
+        <div class="carousel-holder">
+            <div class="carousel-content">
+                <div class="carousel-holder--img">
+                    <img src="./image/image.jpg" alt="image-Novi Sad">
+                    <span class="city-img1">Novi Sad, Serbia</span>
+                </div>
+                <div class="carousel-holder--img">
+                    <img src="./image/image copy (1).jpg" alt="image-Amsterdam">
+                    <span class="city-img2">Amsterdam, Netherlands</span>
+                </div>
+                <div class="carousel-holder--img">
+                    <img src="./image/image copy (2).jpg" alt="image-Bahamas">
+                    <span class="city-img3">The Bahamas</span>
+                </div>
+            </div>
+            <img src="./image/arrow1.png" onclick="prev()" class="arrow-prev" alt="arrow">
+            <img src="./image/arrow1.png" onclick="next()" class="arrow-next" alt="arrow">
+        </div>
+    </div>
+    <!-- tickets -->
+    <section class="tickets">
+        <h1 class="ticket-main-title">Available Summer Tours</h1>
+        <div class="tickets--items-bus">
+            <div class="items--left">
+                <h2 class="item-title">City Hiking Tour (3 hours)</h2>
+                <p class="item-reservation">Get onboard one of our Round City Cable car Tour</p>
+            </div>
+            <div class="items--right">
+                <p class="item-price">$45.00</p>
+                <button>Book</button>
+            </div>
+        </div>
+        <div class="tickets--items item-tourist">
+            <div class="items--left">
+                <h2 class="item-title">City Hiking Tour (1.5 hours)</h2>
+                <p class="item-reservation">Get onboard one of our Round City Cable car Tour</p>
+            </div>
+            <div class="items--right">
+                <p class="item-price">$45.00</p>
+            </div>
+        </div>
+        <div class="tickets--items item-map">
+            <div class="items--left">
+                <h2 class="item-title">City Hiking Tour (3 hours)</h2>
+                <p class="item-reservation">Get onboard one of our Round City Cable car Tour</p>
+            </div>
+            <div class="items--right">
+                <p class="item-price">$45.00</p>
+            </div>
+        </div>
+        <div class="tickets--items item-cable">
+            <div class="items--left">
+                <h2 class="item-title">City Cable Tour (2 hours)</h2>
+                <p class="item-reservation">Get onboard one of our Round City Cable car Tour</p>
+            </div>
+            <div class="items--right">
+                <p class="item-price">$85.00</p>
+            </div>
+        </div>
+    </section>
+    <!-- accordion -->
+    <section class="accordion clearfix">
+        <div class="for-mobile">
+            <h1 class="accordion-main-title">Traveling is Easy</h1>
+        </div>
+        <div class="accordion-content">
+            <h2 class="main-title">All Services In One Round</h2>
+            <h4 class="subtitle">Travel on beaches</h4>
+            <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et atque blanditiis
+                molestiae, tenetur soluta quae voluptatum. Fugit eos provident
+                eligendi maiores inventore? Numquamlaborum magnam eum saepe?molestiae blanditiis
+                molestiae,<span class="mob-hidden">quibusdam sit maiores laborum magnam eum saepe eos provident
+                    eligendi.</span> tenetur soluta quae voluptatum. Fugit eos providenteligendi maiores inventore quae.
+            </p>
+            <button>Read more</button>
+            <div class="accordion-content--list">
+                <h3>Discover popular places</h3>
+                <ul>
+                    <li class="country-item1" onclick="openCity(event)">
+                        <h4 class="title"><span>TURKEY</span></h4>
+                        <div class="city-title">
+                            <h3>Istanbul</h3>
+                            <div class="blue"></div>
+                            <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit in ipsa
+                                dolorum exercitationem nemo.
+                                Eaque consequatur eum ipsum tenetur obcaecati beatae tempora necessitatibus.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="country-item2" onclick="openCity(event)">
+                        <h4 class="title"><span>RUSSIA</span></h4>
+                        <div class="city-title">
+                            <h3>Moscow</h3>
+                            <div class="blue"></div>
+                            <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit in ipsa
+                                dolorum exercitationem nemo.
+                                Eaque consequatur eum ipsum tenetur obcaecati beatae tempora necessitatibus.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="country-item3" onclick="openCity(event)">
+                        <h4 class="title"><span>BRAZIL</span></h4>
+                        <div class="city-title">
+                            <h3>Brasilia</h3>
+                            <div class="blue"></div>
+                            <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit in ipsa
+                                dolorum exercitationem nemo.
+                                Eaque consequatur eum ipsum tenetur obcaecati beatae tempora necessitatibus.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="country-item4" onclick="openCity(event)">
+                        <h4 class="title"><span>CHINA</span></h4>
+                        <div class="city-title">
+                            <h3>Peking</h3>
+                            <div class="blue"></div>
+                            <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit in ipsa
+                                dolorum exercitationem nemo.
+                                Eaque consequatur eum ipsum tenetur obcaecati beatae tempora necessitatibus.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="country-item5" onclick="openCity(event)">
+                        <h4 class="title"><span>THAILAND</span></h4>
+                        <div class="city-title">
+                            <h3>Bangkok</h3>
+                            <div class="blue"></div>
+                            <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit in ipsa
+                                dolorum exercitationem nemo.
+                                Eaque consequatur eum ipsum tenetur obcaecati beatae tempora necessitatibus.
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- headings -->
+    <main class="container">
+        <h1>I am page heading</h1>
+        <p>Ipsum lorem dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
+            dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam
+            suscipit. <span class="mob-hidden">lobortis nisl ut aliquip ex ea commodo consequat.uis autem vel eum
+                iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla
+                facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit
+                augue
+                duis dolore te. Check it <a href="#" class="orange">here</a> .</p></span>
+        <ul>
+            <li>Enim ad minim veniam iriure dolor in hendrerit</li>
+            <li>Lorem ipsum dolor sit amet, consectetuer adipiscin euismod tincidunt ut
+                laoreet dolore iscing elit, <span class="mob-hidden"> sed diam nonummy nibh euismod tincidunt ut laoreet
+                    dolore magna magna aliquam erat volutpat. Ut wisi enim ad minim veniam,</span> quis nostrud exerci.
+            </li>
+            <li>Lbh euismod tincidunt ut laoreet dolore</li>
+        </ul>
+        <h2>I am page subheading</h2>
+        <p>At vero eos et accusamus et iusto <span class="mob-hidden">odio dignissimos ducimus qui blanditiis</span>
+            praesentium voluptatum deleniti
+            atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate.
+        </p>
+        <p class="last-text">Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe
+            eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a
+            sapiente delectus, s maiores alias consequaus. Check it <a href="#" class="orange">here</a> .
+        </p>
+    </main>
+    <!-- contanct -->
+    <section class="contanct clearfix">
+        <h1>Contact us</h1>
+        <form action="/#">
+            Full name:<br>
+            <input type="text" name="name" value="Jhon Doerr"><br>
+            Email:<br>
+            <input type="text" name="mail" value="jhondoerr@google.com"><br>
+            Message:<br>
+            <input class="text-message" type="text" name="text" value="Your message"><br>
+            <input class="checkbox" type="checkbox" name="agree" value="Agree"> I agree to the <span
+                class="orange">Terms,Privacy Policy</span> and <span class="orange">Fees.</span><br>
+            <input class="button-send" type="submit" value="Send message">
+        </form>
+    </section>
+    <!-- footer -->
+    <footer class="main-footer">
+        <div class="footer-top">
+            <div class="top-content-left">
+                <img src="./image/Vector-Smart-Object-Footer.png" alt="logo2">
+                <ul>
+                    <li>Industry-leading travel app</li>
+                    <li>Aliquam viverra non risus eget auctor.<br>
+                        Praesent tincidunt nunc quis tellus congue
+                    </li>
+                    <li>Made in Novi Sad,<br>
+                        Serbia, SRB
+                    </li>
+                </ul>
+            </div>
+            <div class="top-content-right">
+                <div class="list-content-1">
+                    <h3>FREE TOOLS</h3>
+                    <ul>
+                        <li><a href="#">Instagram Aduit</a></li>
+                        <li><a href="#">Instagram Brands Index</a></li>
+                        <li><a href="#">Instagram Influencers Index</a></li>
+                    </ul>
+                </div>
+                <div class="list-content-2">
+                    <h3>ABOUT</h3>
+                    <ul>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Product Changes</a></li>
+                    </ul>
+                </div>
+                <div class="list-content-3">
+                    <h3>FEATURES</h3>
+                    <ul>
+                        <li><a href="#">Analytics</a></li>
+                        <li><a href="#">Activity</a></li>
+                        <li><a href="#">Content management</a></li>
+                        <li><a href="#">Publishing</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer--bottom">
+            <p>&copyCompany Name All rights reserved</p>
+            <ul class="social-media-items">
+                <li class="media-item facebook"><a href="https://www.facebook.com/"></a></li>
+                <li class="media-item instagram"><a href="https://www.instagram.com"></a></li>
+                <li class="media-item twitter"><a href="https://www.twitter.com"></a></li>
+            </ul>
+        </div>
+    </footer>
     <script src="./js/main.js"></script>
 </body>
 
